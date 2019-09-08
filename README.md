@@ -9,7 +9,19 @@ You can use this Python method to:
 2. Login to your new GMail account and go to, https://www.google.com/settings/security/lesssecureapps.
 3. Toggle "Allow less secure apps" to be "ON":
 ![img](instruction-screenshot.png)
-4. Copy the Python method in [send_email.py](send_email.py) and paste it in your code.
+4. Copy the Python method in [send_email.py](send_email.py) and paste it in your code. (Or you may just copy the code from below):
+```
+def send_email(username, password, sendto, subject, text):
+    print("Sending Email to %s..." % sendto)
+    import smtplib
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(username, password)
+    msg = 'Subject: {}\n\n{}'.format(subject, text)
+    server.sendmail(username, sendto, msg)
+    server.quit()
+    print("Email sent!")
+```
 5. Call the method like so:
 ```
 send_email("YourNewEmail", "YourNewEmailPassword", "ReceiverEmail", "EmailTitle", "EmailBody")
