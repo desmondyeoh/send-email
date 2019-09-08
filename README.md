@@ -12,7 +12,9 @@ You can use this Python method to:
 ![img](instruction-screenshot.png)
 4. Copy the Python method in [send_email.py](send_email.py) and paste it in your code. (Or you may just copy the code from below):
 ```
-def send_email(username, password, sendto, subject, text):
+def send_email(sendto, subject, text):
+    username = "YOUR_NEW_EMAIL" # Change this to your new email
+    password = "YOUR_NEW_EMAIL_PASSWORD" # Change this to the email's password
     for i in range(3):
         try:
             print("Sending Email to {} (trial {})...".format(sendto, i+1))
@@ -31,7 +33,7 @@ def send_email(username, password, sendto, subject, text):
 ```
 5. Call the method like so:
 ```
-send_email("YourNewEmail", "YourNewEmailPassword", "ReceiverEmail", "EmailTitle", "EmailBody")
+send_email("ReceiverEmail", "EmailTitle", "EmailBody")
 ```
 
 ## Acknowledgement
