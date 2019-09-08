@@ -4,6 +4,7 @@ You can use this Python method to:
 1. Notify you whenever a long process is done.
 2. Send email to anyone.
 
+
 ## Installation
 1. Create a new GMail account just for this purpose (You may use your current GMail but not it's not recommended because you will need to turn off 2 Factor Authentication, which makes your account less secure).
 2. Login to your new GMail account and go to, https://www.google.com/settings/security/lesssecureapps.
@@ -32,3 +33,7 @@ def send_email(username, password, sendto, subject, text):
 ```
 send_email("YourNewEmail", "YourNewEmailPassword", "ReceiverEmail", "EmailTitle", "EmailBody")
 ```
+
+## Acknowledgement
+
+Thanks to [@kingkingyyk](https://github.com/kingkingyyk)'s suggestion, this method now comes with exception handling and it will retry for 2 more times (configurable in `range(3)` in the code above) if it fails to send the email due to reasons such as an unstable network.
