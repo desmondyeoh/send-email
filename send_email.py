@@ -2,7 +2,9 @@
 send_email method
 """
 
-def send_email(username, password, sendto, subject, text):
+def send_email(sendto, subject, text):
+    username = "YOUR_NEW_EMAIL" # Change this!
+    password = "YOUR_NEW_EMAIL_PASSWORD" # Change this!
     for i in range(3):
         try:
             print("Sending Email to {} (trial {})...".format(sendto, i+1))
