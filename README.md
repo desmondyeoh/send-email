@@ -10,11 +10,11 @@ You can use this Python method to:
 2. Login to your new GMail account and go to, https://www.google.com/settings/security/lesssecureapps.
 3. Toggle "Allow less secure apps" to be "ON":
 ![img](instruction-screenshot.png)
-4. Copy the Python method in [send_email.py](send_email.py) and paste it in your code. (Or you may just copy the code from below):
+4. Copy the Python method in [send_email.py](send_email.py) and paste it in your code.(Or you may just copy the code from below):
 ```
 def send_email(sendto, subject, text):
-    username = "YOUR_NEW_EMAIL" # Change this to your new email
-    password = "YOUR_NEW_EMAIL_PASSWORD" # Change this to the email's password
+    username = "YOUR_NEW_EMAIL" # Change this!
+    password = "YOUR_NEW_EMAIL_PASSWORD" # Change this!
     for i in range(3):
         try:
             print("Sending Email to {} (trial {})...".format(sendto, i+1))
@@ -31,7 +31,8 @@ def send_email(sendto, subject, text):
             print("Failed to send email due to Exception:")
             print(e)
 ```
-5. Call the method like so:
+5. Remember to change `YOUR_NEW_EMAIL` and `YOUR_NEW_EMAIL_PASSWORD` to your newly registered email credentials.
+6. Call the method like so:
 ```
 send_email("ReceiverEmail", "EmailTitle", "EmailBody")
 ```
