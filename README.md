@@ -37,6 +37,13 @@ def send_email(sendto, subject, text):
 send_email("ReceiverEmail", "EmailTitle", "EmailBody")
 ```
 
+## Troubleshoot
+If you run the code from an unfamiliar device or from an IP of a different country, Google might block you immediately from logging in. To resolve that, follow the following steps:
+1. Sign in to your new GMail account from your browser.
+2. Head on to [https://accounts.google.com/DisplayUnlockCaptcha](https://accounts.google.com/DisplayUnlockCaptcha).
+3. Click the "Continue" button to allow access.
+4. Finally, try logging in using the code again.
+
 ## Acknowledgement
 
 Thanks to [@kingkingyyk](https://github.com/kingkingyyk)'s suggestion, this method now comes with exception handling and it will retry for 2 more times (configurable in `range(3)` in the code above) if it fails to send the email due to reasons such as an unstable network.
